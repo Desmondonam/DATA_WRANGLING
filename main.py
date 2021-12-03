@@ -26,8 +26,9 @@ def searching_string(string):
 # finding the price of items
 prices = doc.find_all(text="₹")
 parent = prices[0].parent
-strong = parent.find('div class="_3I9_wc"')
-print(strong.string)
+#print(parent)
+strong = parent.find_all('div class="_3I9_wc"')
+print(strong)
 
 
 # prices = doc.find_all(text="₹")
@@ -53,3 +54,11 @@ if (type =="price"): # price
 # with open(r'https://www.flipkart.com/search?q=python%20books&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off', 'r') as html_file:
 #     content = html_file.read()
 #     print(content)
+
+
+'''
+looking  for the tags that are asked in the question
+ In particular, look for <div>, <class>, <id> tags to identify sections and content that you need.
+'''
+tag = doc.find("div")
+print(tag)
