@@ -60,5 +60,19 @@ if (type =="price"): # price
 looking  for the tags that are asked in the question
  In particular, look for <div>, <class>, <id> tags to identify sections and content that you need.
 '''
-tag = doc.find("div")
-print(tag)
+div = doc.find("div")
+print(div)
+
+clas = doc.find("class")
+print(clas)
+
+ident = doc.find("id")
+print(ident)
+
+# other identification
+'''
+(Rating, Price, Released date, Features, Availability, Color, shipping cost…)
+'''
+# Rating 
+rating = doc.find_all(text="review")
+print(rating)
